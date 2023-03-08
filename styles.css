@@ -2,13 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
 }
 
 body {
-    height: 100vh;
     display: flex;
     flex-direction: row;
+    height: 100vh;
     background-color: #f3f3f3;
+    border-top: 5px solid #ffff00;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Ruda', sans-serif;
 }
 
 .logo-section {
@@ -16,20 +25,21 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-
     min-width: 33%;
     height: 100%;
     padding: 30% 15px 10px 15px;
-
     border-radius: 0 20px 20px 0;
-
-    background-color: #d3d3d3;
+    background: url("./images/logo-bg.jpg")  #fc7a1e;
+    background-size: cover;
+    background-position: -300px;
+    background-blend-mode: multiply;
+    box-shadow: 2px 0px 5px rgba(0,0,0,.2);
+    color: #ffffff;
 }
 
 .logo-section h1 {
-    font-size: 2rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 5px;
+    font-size: 2rem;
 }
 
 .logo {
@@ -37,14 +47,27 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 60px;
+}
+
+#attribution {
+    display: block;
+    align-self: flex-end;
+}
+
+#attribution a {
+    color: #ffffff;
+    font-size: .7rem;
 }
 
 .form-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* max-width: 60%; */
     height: 100%;
     padding: 15%;
 }
@@ -55,7 +78,6 @@ body {
 }
 
 .cta h2 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5rem;
 }
 
@@ -72,6 +94,13 @@ body {
 .form-row label {
     display: block;
     width: 100%;
+    font-size: 1rem;
+}
+
+.form-row input {
+    margin-top: 2px;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 680px ){
@@ -83,12 +112,19 @@ body {
         width: 100%;
         height: auto;
         padding: 20px;
-
-        border-radius: 0 0 20px 20px;
+        border-radius: 0;
+        background-size: 200%;
+        background-position: 0;
     }
 
     .form-section {
         justify-content: flex-start;
-        padding: 15%;
+        padding: 20px 15%;
+        font-size: .9rem;
+    }
+
+    .form-row input,
+    .form-row label {
+        font-size: .9rem;
     }
 }
