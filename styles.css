@@ -70,20 +70,30 @@ h3 {
     justify-content: center;
     height: 100%;
     padding: 15%;
+    color:#323848;
 }
 
 .cta {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
 }
 
 .cta h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    color: #323848
+
 }
 
 .cta h2,
 .cta p {
     margin-bottom: 10px;
+}
+
+.sign-up-form {
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
 }
 
 .form-row {
@@ -101,6 +111,25 @@ h3 {
     margin-top: 2px;
     padding: 8px;
     border-radius: 5px;
+}
+
+#show-password {
+    font-size: .75rem;
+    color: #2685E3;
+}
+
+.submit-button {
+    margin: 10px 0px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: #fc7a1e;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+#sign-in {
+    color: #2685E3;
 }
 
 @media screen and (max-width: 680px ){
