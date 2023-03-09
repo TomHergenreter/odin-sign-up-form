@@ -158,6 +158,10 @@ h3 {
     color: #fc7a1e;
 }
 
+#confirm-password.invalid {
+    border-color: rgba(255, 25, 0, 0.869);
+}
+
 /* Checkbox Styles */
 .form-row.checkbox{
     display: flex;
