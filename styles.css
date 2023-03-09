@@ -10,7 +10,7 @@ body {
     flex-direction: row;
     height: 100vh;
     background-color: #f3f3f3;
-    border-top: 5px solid #ffff00;
+    border-top: 7px solid #ffff00;
     font-family: 'Roboto Slab', serif;
 }
 
@@ -51,7 +51,11 @@ h3 {
 }
 
 .logo img {
-    width: 60px;
+    width: 80px;
+}
+
+.logo h1 {
+    font-size: 3rem;
 }
 
 #attribution {
@@ -93,6 +97,7 @@ h3 {
     margin-bottom: 10px;
 }
 
+/* form styles */
 .sign-up-form {
     padding: 20px;
     background-color: #ffffff;
@@ -112,7 +117,12 @@ h3 {
     padding: 8px;
     border: 2px solid #323848;
     border-radius: 3px;
+    color:#323848;
     transition: all .5s ease;
+}
+
+.form-row:last-child {
+    margin: 0;
 }
 
 .form-row input:focus {
@@ -120,11 +130,20 @@ h3 {
     border: 2px solid #fc7a1e;
 }
 
+.form-row input::placeholder {
+    color: #ffffff;
+}
+
+.form-row input:focus::placeholder {
+    color: #71788c;
+}
+
 .form-row label {
+    line-height: 15px;
     padding: 0 5px;
     border-radius: 10px;
     position: absolute;
-    top: 10px;
+    bottom: 12px;
     left: 5px;
     font-size: .9rem;
     color: #71788c;
@@ -134,11 +153,32 @@ h3 {
 
 .form-row input:focus ~ label,
 .form-row input:not(:placeholder-shown) ~ label {
-    top: -10px;
+    bottom: 32px;
     font-size: .75rem;
     color: #fc7a1e;
 }
 
+/* Checkbox Styles */
+.form-row.checkbox{
+    display: flex;
+    padding: 0 0 0 1px;
+}
+
+.form-row.checkbox input {
+    width: auto;
+    accent-color:#2685E3;
+    
+}
+
+.form-row.checkbox input ~ label {
+    position: static;
+    display: block;
+    padding: 2px 5px 0 5px;
+    border-radius: 0;
+    font-size: .8rem;
+    color: #71788c;
+    background-color: #ffffff;
+} 
 
 #show-password {
     font-size: .75rem;
@@ -150,14 +190,22 @@ h3 {
     padding: 10px 40px;
     border-radius: 5px;
     background-color: #fc7a1e;
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: 'Ruda', sans-serif;
+    font-weight: bold;
     font-size: 1rem;
     color: #ffffff;
 }
 
 #sign-in {
+    font-size: .85rem;
+}
+
+#sign-in span {
     color: #2685E3;
 }
+
+/* testing */
+
 
 @media screen and (max-width: 680px ){
     body {
