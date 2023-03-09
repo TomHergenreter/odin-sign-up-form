@@ -25,8 +25,10 @@ passwordField.addEventListener('focus', confirmMatch);
 function confirmMatch(){
     if(passwordConfirm.value === passwordField.value){
         passwordConfirm.classList.remove('invalid');
+        passwordConfirm.setCustomValidity('');
     }else{
         passwordConfirm.classList.add('invalid');
+        passwordConfirm.setCustomValidity('Passwords do not match!')
     }
 };
 

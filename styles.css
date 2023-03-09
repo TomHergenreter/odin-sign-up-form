@@ -10,7 +10,6 @@ body {
     flex-direction: row;
     height: 100vh;
     background-color: #f3f3f3;
-    border-top: 7px solid #ffff00;
     font-family: 'Roboto Slab', serif;
 }
 
@@ -28,11 +27,11 @@ h3 {
     min-width: 33%;
     height: 100%;
     padding: 20% 15px 10px 15px;
-    border-radius: 0 20px 20px 0;
     background: url("./images/logo-bg.jpg")  #fc7a1e;
     background-size: cover;
     background-position: -300px;
     background-blend-mode: multiply;
+    border-right: 5px solid yellow;
     box-shadow: 2px 0px 5px rgba(0,0,0,.2);
     color: #ffffff;
 }
@@ -80,28 +79,31 @@ h3 {
 .cta {
     display: flex;
     flex-direction: column;
-    padding: 10px 6px;
 }
 
 .cta h2 {
+    padding: 5px 20px;
     font-size: 2rem;
     color: #323848;
+    border-bottom: 5px solid yellow;
+    background: url("./images/logo-bg.jpg");
+    background-size: 1000px;
+    background-blend-mode:hue;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .cta p {
-    color: #56617d;  
-}
-
-.cta h2,
-.cta p {
-    margin-bottom: 10px;
+    color: #56617d;
+    background-color: #ffffff;
+    padding: 10px 20px;  
 }
 
 /* form styles */
 .sign-up-form {
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .form-row {
