@@ -27,7 +27,7 @@ h3 {
     flex-wrap: wrap;
     min-width: 33%;
     height: 100%;
-    padding: 30% 15px 10px 15px;
+    padding: 20% 15px 10px 15px;
     border-radius: 0 20px 20px 0;
     background: url("./images/logo-bg.jpg")  #fc7a1e;
     background-size: cover;
@@ -76,14 +76,16 @@ h3 {
 .cta {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border-radius: 10px 10px 0 0;
+    padding: 10px 6px;
 }
 
 .cta h2 {
-    font-size: 1.75rem;
-    color: #323848
+    font-size: 2rem;
+    color: #323848;
+}
 
+.cta p {
+    color: #56617d;  
 }
 
 .cta h2,
@@ -93,25 +95,50 @@ h3 {
 
 .sign-up-form {
     padding: 20px;
-    border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .form-row {
-    margin-bottom: 10px;
-}
-
-.form-row input,
-.form-row label {
-    display: block;
-    width: 100%;
-    font-size: 1rem;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .form-row input {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
     margin-top: 2px;
     padding: 8px;
-    border-radius: 5px;
+    border: 2px solid #323848;
+    border-radius: 3px;
+    transition: all .5s ease;
 }
+
+.form-row input:focus {
+    outline: none;
+    border: 2px solid #fc7a1e;
+}
+
+.form-row label {
+    padding: 0 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: .9rem;
+    color: #71788c;
+    background-color: #ffffff;
+    transition: all .25s ease;
+}
+
+.form-row input:focus ~ label,
+.form-row input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    font-size: .75rem;
+    color: #fc7a1e;
+}
+
 
 #show-password {
     font-size: .75rem;
