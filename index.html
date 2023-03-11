@@ -24,36 +24,36 @@
                 <h2>XPLOR TOGETHER!</h2>
                 <p>Join our community of adventure seekers and never miss out on a chance to experience the world's natural wonders.</p>
             </section>
-            <form action="#" method="post" class="sign-up-form" id="form">
+            <form action="" method="post" class="sign-up-form" id="form">
                 <div class="form-row">
-                    <input type="text" id="full-name" name="full-name" placeholder="required" required/>
-                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="John Smith" pattern ="[A-Za-z]+\s+[A-Za-z]+" autofocus required/>
+                    <label for="full-name">Full Name <sup>*</sup></label>
                 </div>
                 <div class="form-row">
-                    <input type="email" id="e-mail" name="e-mail" placeholder="required" required/>
-                    <label for="e-mail">E-Mail</label>
+                    <input type="email" id="e-mail" name="e-mail" placeholder="john@fakemail.com" pattern="[-A-Za-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-A-Za-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?" required/>
+                    <label for="e-mail">E-Mail <sup>*</sup></label>
                 </div> 
                 <div class="form-row">
-                    <input type="tel" id="phone" name="phone" placeholder="required" required/>
-                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" required/>
+                    <label for="phone">Phone Number <sup>*</sup></label>
                 </div>
                 <div class="form-row">
-                    <input type="password" id="password" name="password" placeholder="required" autocomplete="no" required/>
-                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Must include 8 characters, 1 number" autocomplete="no" pattern="^(?=.*\d).{8,}$" required/>
+                    <label for="password">Password <sup>*</sup></label>
                 </div>
                 <div class="form-row">
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="required" autocomplete="no" required/>
-                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder=" " autocomplete="no" required/>
+                    <label for="confirm-password">Confirm Password <sup>*</sup></label>
                 </div>
                 <div class="form-row checkbox">
                     <input type="checkbox" id="show-password"/>
                     <label for="show-password">Show Password</label>
                 </div>
+                <div class="form-row">
+                    <button type="submit" class="submit-button" form="form">Sign Up</button>
+                    <p id="sign-in">Already a member?&nbsp;<span>Sign In</span></p>
+                </div>
             </form>
-            <div class="form-row">
-                <button type="submit" class="submit-button" form="form">Sign Up</button>
-                <p id="sign-in">Already a member?&nbsp;<span>Sign In</span></p>
-            </div>
         </section>
         
         <script src="./validate.js" async defer></script>

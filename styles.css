@@ -27,11 +27,11 @@ h3 {
     min-width: 33%;
     height: 100%;
     padding: 20% 15px 10px 15px;
-    background: url("./images/logo-bg.jpg")  #fc7a1e;
+    background: url("./images/logo-bg.jpg") #02111d;
     background-size: cover;
     background-position: -300px;
-    background-blend-mode: multiply;
-    border-right: 5px solid yellow;
+    background-blend-mode: overlay;
+    border-right: 5px solid #2685E3;
     box-shadow: 2px 0px 5px rgba(0,0,0,.2);
     color: #ffffff;
 }
@@ -72,7 +72,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    padding: 15%;
+    padding: 10%;
     color:#323848;
 }
 
@@ -83,27 +83,18 @@ h3 {
 
 .cta h2 {
     padding: 5px 20px;
-    font-size: 2rem;
-    color: #323848;
-    border-bottom: 5px solid yellow;
-    background: url("./images/logo-bg.jpg");
-    background-size: 1000px;
-    background-blend-mode:hue;
-    background-color: #fff;
-    border-radius: 5px;
+    font-size: 2.2rem;
+    color: #2685E3;
 }
 
 .cta p {
     color: #56617d;
-    background-color: #ffffff;
-    padding: 10px 20px;  
+    padding: 10px 20px 10px 20px;  
 }
 
 /* form styles */
 .sign-up-form {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 0px 0px 10px 10px;
+    padding: 10px 20px;
 }
 
 .form-row {
@@ -115,10 +106,12 @@ h3 {
     display: block;
     width: 100%;
     font-size: 1rem;
+    font-family: "Roboto Slab", serif;
     margin-top: 2px;
     padding: 8px;
     border: 2px solid #323848;
     border-radius: 3px;
+    background-color: #f3f3f3;
     color:#323848;
     transition: all .5s ease;
 }
@@ -129,45 +122,68 @@ h3 {
 
 .form-row input:focus {
     outline: none;
-    border: 2px solid #fc7a1e;
+    border: 2px solid #2685E3;
+}
+
+input:valid:focus {
+    border-color: green;
 }
 
 .form-row input::placeholder {
-    color: #ffffff;
+    color: #f3f3f3;
+    font-size: .85rem;
+    transition: all 1s ease;
 }
 
 .form-row input:focus::placeholder {
     color: #71788c;
 }
 
+.form-row label::after {
+    opacity: 0;
+    content: '\2713';
+    position: absolute;
+    top: 2px;
+    right: -8px;
+    font-size: .8rem;
+    color: rgb(1, 163, 1);
+    background-color:#f3f3f3;
+    transition: all .25s ease;
+}
+
+input:valid ~ label:after {
+    opacity: 1;
+}
+
 .form-row label {
     line-height: 15px;
     padding: 0 5px;
-    border-radius: 10px;
     position: absolute;
     bottom: 12px;
     left: 5px;
     font-size: .9rem;
     color: #71788c;
-    background-color: #ffffff;
+    background-color: #f3f3f3;
     transition: all .25s ease;
 }
 
 .form-row input:focus ~ label,
 .form-row input:not(:placeholder-shown) ~ label {
-    bottom: 32px;
+    bottom: 34px;
     font-size: .75rem;
-    color: #fc7a1e;
+    color: #2685E3;
 }
 
-#confirm-password.invalid {
-    border-color: rgba(255, 25, 0, 0.869);
+.form-row input:valid:focus ~ label,
+.form-row input:valid:not(:placeholder-shown) ~ label {
+    color: green
 }
 
 /* Checkbox Styles */
 .form-row.checkbox{
     display: flex;
     padding: 0 0 0 1px;
+    margin-bottom: 5px;
 }
 
 .form-row.checkbox input {
@@ -183,10 +199,13 @@ h3 {
     border-radius: 0;
     font-size: .8rem;
     color: #71788c;
-    background-color: #ffffff;
 } 
 
-#show-password {
+.form-row.checkbox input ~ label::after {
+    content: '';
+}
+
+.form-row.form-row.checkbox input:valid ~ label{
     font-size: .75rem;
     color: #2685E3;
 }
@@ -195,7 +214,7 @@ h3 {
     margin: 10px 0px;
     padding: 10px 40px;
     border-radius: 5px;
-    background-color: #fc7a1e;
+    background-color: #2685E3;
     font-family: 'Ruda', sans-serif;
     font-weight: bold;
     font-size: 1rem;
@@ -225,11 +244,24 @@ h3 {
         border-radius: 0;
         background-size: 200%;
         background-position: 0;
+        border-right: none;
+        border-bottom: 7px solid #2685E3;
+        margin-bottom: 15px;
+    }
+
+    #attribution {
+        position: absolute;
+        bottom: 5px;
+    }
+
+    #attribution a {
+        color: #2685E3;
+        font-size: .5rem;
     }
 
     .form-section {
         justify-content: flex-start;
-        padding: 20px 15%;
+        padding: 0px;
         font-size: .9rem;
     }
 

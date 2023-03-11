@@ -1,6 +1,8 @@
 const showPassword = document.getElementById('show-password');
+const form = document.getElementById('form');
 const passwordField = document.getElementById('password');
 const passwordConfirm = document.getElementById('confirm-password');
+
 
 console.log(passwordConfirm);
 
@@ -13,6 +15,11 @@ showPassword.addEventListener('click', (e) => {
         passwordConfirm.type = 'password';
     }
 });
+
+form.addEventListener('click', (e) => {
+    console.table(form.children);
+    
+})
 
 passwordConfirm.addEventListener('keyup', confirmMatch);
 passwordConfirm.addEventListener('blur', confirmMatch);
