@@ -3,9 +3,7 @@ const form = document.getElementById('form');
 const passwordField = document.getElementById('password');
 const passwordConfirm = document.getElementById('confirm-password');
 
-
-console.log(passwordConfirm);
-
+// Show/hide password
 showPassword.addEventListener('click', (e) => {
     if (showPassword.checked) {
         passwordField.type = 'text';
@@ -16,25 +14,19 @@ showPassword.addEventListener('click', (e) => {
     }
 });
 
-form.addEventListener('click', (e) => {
-    console.table(form.children);
-    
-})
+// Check password match
+passwordField.addEventListener('keyup', confirmMatch);
+passwordField.addEventListener('blur', confirmMatch);
+passwordField.addEventListener('focus', confirmMatch);
 
 passwordConfirm.addEventListener('keyup', confirmMatch);
 passwordConfirm.addEventListener('blur', confirmMatch);
 passwordConfirm.addEventListener('focus', confirmMatch); 
 
-passwordField.addEventListener('keyup', confirmMatch);
-passwordField.addEventListener('blur', confirmMatch);
-passwordField.addEventListener('focus', confirmMatch); 
-
 function confirmMatch(){
     if(passwordConfirm.value === passwordField.value){
-        passwordConfirm.classList.remove('invalid');
         passwordConfirm.setCustomValidity('');
     }else{
-        passwordConfirm.classList.add('invalid');
         passwordConfirm.setCustomValidity('Passwords do not match!')
     }
 };
